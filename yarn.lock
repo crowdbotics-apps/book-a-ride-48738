@@ -2595,13 +2595,6 @@
     react-native-qrcode-svg "6.1.2"
     react-native-svg "12.3.0"
 
-"@modules/2fa@file:./modules/2fa/":
-  version "1.0.1"
-  dependencies:
-    react-native-dropdown-picker "^5.4.6"
-    react-native-qrcode-svg "6.1.2"
-    react-native-svg "12.3.0"
-
 "@modules/address-selection-autocomplete@file:./modules/address-selection-autocomplete":
   version "1.0.0"
 
@@ -2646,6 +2639,9 @@
   version "1.0.0"
 
 "@modules/maps@file:./modules/maps":
+  version "1.0.0"
+
+"@modules/maps@file:./modules/maps/":
   version "1.0.0"
 
 "@modules/payments@file:./modules/payments":
@@ -3339,7 +3335,7 @@
   resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.8.tgz#30744afdb385e2945e22f3b033f897f76b1f12ca"
   integrity sha512-1rkryxURpr6aWP7R786/UQOkJ3PcpQiWkAXBmdWc7ryFWqN6a4xfK7BtjXvFBKO9LjQ+MWQSWxYeZX1OApnArA==
 
-"@types/geojson@^7946.0.7":
+"@types/geojson@^7946.0.10", "@types/geojson@^7946.0.7":
   version "7946.0.14"
   resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.14.tgz#319b63ad6df705ee2a65a73ef042c8271e696613"
   integrity sha512-WCfD5Ht3ZesJUsONdhvm84dmzWOiOzOAqOncN0++w0lBw1o8OuDNJF2McvvCef/yBqb/HYRahp1BYtODFQ8bRg==
@@ -10112,10 +10108,12 @@ react-native-maps-directions@1.8.0:
     lodash.isequal "^4.5.0"
     prop-types "^15.6.0"
 
-react-native-maps@0.27.1:
-  version "0.27.1"
-  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.27.1.tgz#2f10cd417bb2fd938c9e015b1c9b6d9b1a44b97f"
-  integrity sha512-HygBkZBecTnIVRYrSiLRAvu4OmXOYso/A7c6Cy73HkOh9CgGV8Ap5eBea24tvmFGptjj5Hg8AJ94/YbmWK1Okw==
+react-native-maps@1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-1.7.1.tgz#e0b9d68542b4b59b5ca3df375ada7c860fb41f2e"
+  integrity sha512-CHVLzL+Q2jiUGgbt4/vosxVI1SukWyaLGjD62VLgR/wZpnH4Umi9ql1bmKDPWcfj2C1QZwMU0Yc7rXTbvZUIiw==
+  dependencies:
+    "@types/geojson" "^7946.0.10"
 
 react-native-onesignal@^4.0.3:
   version "4.5.3"
