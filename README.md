@@ -63,6 +63,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-terms-and-conditions-webview](modules/terms-and-conditions-webview)
 - [react-native-appointment](modules/appointment)
 - [react-native-chat](modules/chat)
+- [django-docusign](backend/modules)
 
 # Getting started: Frontend
 
