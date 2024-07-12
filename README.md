@@ -79,6 +79,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-zoom-free-calling](modules/zoom-free-calling)
 - [django-files](backend/modules)
 - [django-calendly](backend/modules)
+- [django-contact-us](backend/modules)
 
 # Getting started: Frontend
 
