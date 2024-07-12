@@ -2552,6 +2552,13 @@
     react-native-qrcode-svg "6.1.2"
     react-native-svg "12.3.0"
 
+"@modules/2fa@file:./modules/2fa/":
+  version "1.0.1"
+  dependencies:
+    react-native-dropdown-picker "^5.4.6"
+    react-native-qrcode-svg "6.1.2"
+    react-native-svg "12.3.0"
+
 "@modules/address-selection-autocomplete@file:./modules/address-selection-autocomplete":
   version "1.0.0"
 
@@ -2586,9 +2593,6 @@
   version "1.0.0"
 
 "@modules/maps@file:./modules/maps":
-  version "1.0.0"
-
-"@modules/maps@file:./modules/maps/":
   version "1.0.0"
 
 "@modules/photo-editing@file:./modules/photo-editing":
