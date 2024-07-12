@@ -39,3 +39,4 @@ cb-django-docusign = {editable = true, path = "./modules/django_docusign"}
 cb-payments = {editable = true, path = "./modules/payments"}
 cb-firebase-push-notifications = {editable = true, path = "./modules/firebase_push_notifications"}
 cb-django-files = {editable = true, path = "./modules/django_files"}
+cb-django-calendly = {editable = true, path = "./modules/django_calendly"}
