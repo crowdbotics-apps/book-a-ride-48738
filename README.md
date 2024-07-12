@@ -65,6 +65,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-chat](modules/chat)
 - [django-docusign](backend/modules)
 - [react-native-photo-editing](modules/photo-editing)
+- [react-native-fingerprint-authentication](modules/fingerprint-authentication)
 
 # Getting started: Frontend
 
