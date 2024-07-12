@@ -37,3 +37,4 @@ azure-keyvault-secrets = "~=4.8.0"
 azure-identity = "~=1.16.0"
 cb-django-docusign = {editable = true, path = "./modules/django_docusign"}
 cb-firebase-push-notifications = {editable = true, path = "./modules/firebase_push_notifications"}
+cb-payments = {editable = true, path = "./modules/payments"}

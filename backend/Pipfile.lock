@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "02ed91997b768037100e6bdbaf73b8633464be6592f5066a36ed603f05cb5fd1"
+            "sha256": "d277f4ac19aa1d6c3c1d601f4c4c05216aa3e75dc0ba3c5eaf974868307ce65b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -110,6 +110,10 @@
         "cb-firebase-push-notifications": {
             "editable": true,
             "path": "./modules/firebase_push_notifications"
+        },
+        "cb-payments": {
+            "editable": true,
+            "path": "./modules/payments"
         },
         "certifi": {
             "hashes": [
@@ -1303,6 +1307,14 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==0.5.0"
+        },
+        "stripe": {
+            "hashes": [
+                "sha256:d39a557fe3bbf75db181dce25b5d6d62039a65b024a7854cdd67eedf9169bfcc",
+                "sha256:ffab4b53dda04197d641acec98150327860bf8535e14b522775f0aa3e2379ce1"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "version": "==2.26.0"
         },
         "tablib": {
             "hashes": [
