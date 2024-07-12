@@ -62,6 +62,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-address-selection-google-autocomplete](modules/address-selection-autocomplete)
 - [react-native-terms-and-conditions-webview](modules/terms-and-conditions-webview)
 - [react-native-appointment](modules/appointment)
+- [react-native-chat](modules/chat)
 
 # Getting started: Frontend
 
