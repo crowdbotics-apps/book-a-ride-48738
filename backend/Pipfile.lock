@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d277f4ac19aa1d6c3c1d601f4c4c05216aa3e75dc0ba3c5eaf974868307ce65b"
+            "sha256": "4c3c24a5c7832e26b0ea1c3127f0e07f22247a4ee17d61d889bbc11e22bd99ed"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -106,6 +106,10 @@
         "cb-django-docusign": {
             "editable": true,
             "path": "./modules/django_docusign"
+        },
+        "cb-django-files": {
+            "editable": true,
+            "path": "./modules/django_files"
         },
         "cb-firebase-push-notifications": {
             "editable": true,
