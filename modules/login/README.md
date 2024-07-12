@@ -1,56 +1,58 @@
-# Login React native specs
+# Login Module
+The Login Module is a React Native-based module that allows the user to login or signup within their app.
 
-## Module description
+## Installation
 
-The Login Module is a React Native-based module that enables users to conveniently log in or sign up directly within their application.
+#### Update api url
 
-- Ability to log in/signup using a valid email and password.
-- Ability to reset/forgot password - a recovery email link is generated on the registered email address.
+Update the file `<module_directory>/auth/api.js`, replacing the value of `baseURL` with your own app's backend url. For example, if your app is called `my-app` and has a url of `https://my-app.botics.co`, update from
+`baseURL: "https://your-app-backend.botics.co"` to `baseURL: "https://my-app.botics.co"`
 
-![image](https://github.com/cbshoaib/modules/assets/76822297/ef8c9fce-8e05-4dbe-9b19-c89aa94c598c)
+Note for developers: you can access the user token through the reducer state (i.e. `state.login.token` and user auth information like email at `state.login.user`)
 
-## ## Features
+### Change Login screen destination to your desired screen (likely Home screen).
 
- - [x] This module includes environment variables.
- - [x] This module requires manual configurations.
- - [x] This module can be configured with module options.
- - [ ] This module requires manual Android setup.
- - [ ] This module requires manual iOS setup.
+Open the `screens/constants.js` file and edit the `HOME_SCREEN_NAME` value with desired destination screen (likely Home Screen). For example, if my home screen has a navigation name of `HomeScreen1234`, then I should change as follows: `export const HOME_SCREEN_NAME = 'HomeScreen1234'`. If you desire, you can also update your logo image URL (be mindful that the size of the image should match the original ones for ideal results).
 
-## ## 3rd party setup
 
-No 3rd party account required.
+## Modify backend (optional)
+The configuration steps below will allow your app to send emails like verification email and password reset emails. 
+If your app's backend does not have SENDGRID environmental variables available, _make changes to project backend files (in /backend/YOUR_PROJECT folder):_
 
-## Dependencies
+**MODIFY: /backend/YOUR_PROJECT_NAME/settings.py** version in your project backend folder
 
-Dependencies used:
- - react-native-keyboard-aware-scroll-view  -  https://www.npmjs.com/package/react-native-keyboard-aware-scroll-view
- - @react-navigation/native  -  https://www.npmjs.com/package/@react-navigation/native
- - @react-navigation/stack  -  https://www.npmjs.com/package/@react-navigation/stack
- - prop-types  -  https://www.npmjs.com/package/prop-types
- - @react-native-async-storage/async-storage  -  https://www.npmjs.com/package/@react-native-async-storage/async-storage
+**ADD** above AWS S3 Config lines:
 
-## ## Module Options
-
-### Global Configs
-
-Update the ``options/options.js`` file with your app's backend url.
-```
-export const globalOptions = {
-    ...
-  url: "https://my-app.botics.co",
-   ...
-}
+```sh
+EMAIL_HOST = env.str("EMAIL_HOST", "smtp.sendgrid.net")
+EMAIL_HOST_USER = env.str("SENDGRID_USERNAME", "")
+EMAIL_HOST_PASSWORD = env.str("SENDGRID_PASSWORD", "")
 ```
 
-### Local Configs
+If this code already exists, you can just skip this step.
 
-To set the screen to redirect to, open the module options file for the Login Module -- `modules/login/options.js`.Inside this file, change the `HOME_SCREEN_NAME` value to the string of the screen you want to redirect to.
+### Setup SendGrid account and keep reference to username and password.
 
-### Android setup
+Reference website [Sendgrid](https://wwww.sendgrid.com)
 
-No android setup required.
+### Configure Environment Variables.
 
-### iOS setup
+Using the Crowdbotics Dashboard, navigate to "Settings" and select the tab "Environment Variables", here you will add the following variables:
 
-No iOS setup required.
+```
+SENDGRID_USERNAME
+SENDGRID_PASSWORD
+```
+
+## Old Crowdbotics Scaffold (optional)
+If your project does not use the latest version of Crowdbotics scaffold, you might need manually configure this module in order for it to work properly, including:
+- Adding the module to the main apps' navigation tree
+- Adding the redux-toolkit to your project and loading the proper middleware
+- Loading the module's reducer to the store
+
+To verify if your project is on the latest version, look for a `.crowdbotics.json` file at the root of your project.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Please make sure to update tests as appropriate.

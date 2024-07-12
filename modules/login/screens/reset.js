@@ -1,29 +1,27 @@
-import React, { useContext, useState } from "react";
-import { OptionsContext } from "@options";
+import React, { useState } from "react";
 import {
   Image,
   Alert,
   View,
   TouchableOpacity,
   TextInput,
-  Text
+  Text,
 } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useSelector, useDispatch } from "react-redux";
 import { unwrapResult } from "@reduxjs/toolkit";
 import { styles, textInputStyles } from "./styles";
-import { validateEmail } from "../constants";
+import { validateEmail, LOGO_URL } from "./constants.js";
 import { resetPassword } from "../auth";
 
-const PasswordRecover = ({ navigation, route }) => {
-  const options = useContext(OptionsContext);
-  const { LOGO_IMAGE, textInputStyle, buttonStyle, buttonTextStyle } = route.params;
+const PasswordRecover = ({ navigation }) => {
   const [email, setEmail] = useState("");
-  const { api } = useSelector((state) => state.Login);
+  const { api } = useSelector((state) => state.login);
   const dispatch = useDispatch();
 
   const handlePasswordReset = () => {
-    if (!validateEmail.test(email)) { return Alert.alert("Error", "Please enter a valid email address."); }
+    if (!validateEmail.test(email))
+      return Alert.alert("Error", "Please enter a valid email address.");
 
     dispatch(resetPassword({ email }))
       .then(unwrapResult)
@@ -40,13 +38,13 @@ const PasswordRecover = ({ navigation, route }) => {
   const renderImage = () => {
     const imageSize = {
       width: 365,
-      height: 161
+      height: 161,
     };
     return (
       <Image
         style={[styles.image, imageSize]}
         source={{
-          uri: LOGO_IMAGE || options.LOGO_URL
+          uri: LOGO_URL,
         }}
       />
     );
@@ -54,7 +52,7 @@ const PasswordRecover = ({ navigation, route }) => {
 
   return (
     <View style={{ flex: 1 }}>
-      <KeyboardAwareScrollView contentContainerStyle={[styles.screen, { justifyContent: "center" }]}>
+      <KeyboardAwareScrollView contentContainerStyle={styles.screen}>
         {renderImage()}
         <Text style={styles.heading}>{"Password Recovery"}</Text>
         <View style={styles.fieldContainer}>
@@ -64,7 +62,7 @@ const PasswordRecover = ({ navigation, route }) => {
             onChangeText={(value) => setEmail(value)}
             placeholder="eg: yourname@gmail.com"
             size="small"
-            style={[styles.input, textInputStyle]}
+            style={styles.input}
             keyboardType="email-address"
             textStyle={styles.text}
             autoCapitalize="none"
@@ -80,11 +78,14 @@ const PasswordRecover = ({ navigation, route }) => {
         <TouchableOpacity
           disabled={api.loading === "pending"}
           activeOpacity={0.7}
-          style={[styles.actionButon, buttonStyle]}
+          style={[styles.actionButon]}
           onPress={handlePasswordReset}
         >
           <Text
-            style={[styles.resetText, buttonTextStyle]}
+            style={{
+              color: "#fff",
+              fontSize: 15,
+            }}
           >
             Reset Password
           </Text>
