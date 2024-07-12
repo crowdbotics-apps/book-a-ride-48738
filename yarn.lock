@@ -2588,10 +2588,10 @@
 "@modules/maps@file:./modules/maps":
   version "1.0.0"
 
-"@modules/maps@file:./modules/maps/":
+"@modules/photo-editing@file:./modules/photo-editing":
   version "1.0.0"
 
-"@modules/photo-editing@file:./modules/photo-editing":
+"@modules/photo-editing@file:./modules/photo-editing/":
   version "1.0.0"
 
 "@modules/terms-and-conditions-webview@file:./modules/terms-and-conditions-webview":
