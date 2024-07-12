@@ -2647,6 +2647,9 @@
 "@modules/photo-editing@file:./modules/photo-editing":
   version "1.0.0"
 
+"@modules/push-notifications@file:./modules/push-notifications/":
+  version "1.0.0"
+
 "@modules/terms-and-conditions-webview@file:./modules/terms-and-conditions-webview":
   version "1.0.0"
 
@@ -7185,7 +7188,7 @@ interpret@^3.1.1:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-3.1.1.tgz#5be0ceed67ca79c6c4bc5cf0d7ee843dcea110c4"
   integrity sha512-6xwYfHbajpoF0xLW+iwLkhwgvLoZDfjYfoFNu8ftMoXINzwuymNLd9u/KmwtdT2GbR+/Cz66otEGEVVUHX9QLQ==
 
-invariant@*, invariant@2.2.4, invariant@^2.2.4:
+invariant@*, invariant@2.2.4, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -10106,6 +10109,13 @@ react-native-maps@0.27.1:
   version "0.27.1"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.27.1.tgz#2f10cd417bb2fd938c9e015b1c9b6d9b1a44b97f"
   integrity sha512-HygBkZBecTnIVRYrSiLRAvu4OmXOYso/A7c6Cy73HkOh9CgGV8Ap5eBea24tvmFGptjj5Hg8AJ94/YbmWK1Okw==
+
+react-native-onesignal@^4.0.3:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/react-native-onesignal/-/react-native-onesignal-4.5.3.tgz#8da27a261d1aef140c6d8a5a1a01dd4717c5e166"
+  integrity sha512-cDJXF8r3Ilvo+FOCDYXjsDghV3BccJpM9wiz/StMLX/g7TZ9KfksIWRvScZBL35q/OQJPIS+HwsGB+b6TuFkjA==
+  dependencies:
+    invariant "^2.2.2"
 
 react-native-pager-view@5.4.15:
   version "5.4.15"
