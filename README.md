@@ -76,6 +76,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-social-login](modules/social-login)
 - [react-native-user-profile](modules/user-profile)
 - [react-native-privacy-policy-webview](modules/privacy-policy-webview)
+- [react-native-zoom-free-calling](modules/zoom-free-calling)
 
 # Getting started: Frontend
 
