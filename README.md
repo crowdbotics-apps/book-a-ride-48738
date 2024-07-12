@@ -68,6 +68,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-fingerprint-authentication](modules/fingerprint-authentication)
 - [firebase-push-notifications]()
 - [react-native-maps](modules/maps)
+- [react-native-login](modules/login)
 
 # Getting started: Frontend
 
