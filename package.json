@@ -26,6 +26,7 @@
     "@modules/onboarding": "file:./modules/onboarding/",
     "@modules/payments": "file:./modules/payments",
     "@modules/photo-editing": "file:./modules/photo-editing/",
+    "@modules/privacy-policy-webview": "file:./modules/privacy-policy-webview/",
     "@modules/push-notifications": "file:./modules/push-notifications/",
     "@modules/social-login": "file:./modules/social-login/",
     "@modules/terms-and-conditions-webview": "file:./modules/terms-and-conditions-webview/",
