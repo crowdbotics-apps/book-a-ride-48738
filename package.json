@@ -16,6 +16,7 @@
     "@babel/polyfill": "^7.12.1",
     "@modules/2fa": "file:./modules/2fa/",
     "@modules/address-selection-autocomplete": "file:./modules/address-selection-autocomplete/",
+    "@modules/terms-and-conditions-webview": "file:./modules/terms-and-conditions-webview/",
     "@react-native-community/geolocation": "2.1.0",
     "@react-native-masked-view/masked-view": "^0.2.9",
     "@react-navigation/native": "^6.1.6",
@@ -39,6 +40,7 @@
     "react-native-screens": "^3.20.0",
     "react-native-vector-icons": "^9.2.0",
     "react-native-web": "^0.18.10",
+    "react-native-webview": "11.23.0",
     "react-redux": "^8.0.5",
     "redux": "^4.2.1"
   },
